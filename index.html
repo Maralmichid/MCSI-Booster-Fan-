@@ -1,0 +1,139 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.5/xlsx.full.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Сургалтын Статус Шалгах</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="search">
+          <input type="text" class="search__field" placeholder="САП аа оруул">
+          <button class="btn search__btn">Хайх</button>
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="companyName"></div>
+        <div class="name"></div>
+      </div>
+      <div id="trainustgah" class="surgaltHaruulah">
+        <!-- <div class="surgalt">
+          <div class="surgaltDate">15-Aug</div>
+          <div class="surgaltName">WAH Refresher</div>
+          <div class="venue">Shaft 1 Room 4</div>
+          <div class="hours">08:00-17:00</div>
+        </div>
+        <div class="surgalt">
+          <div class="surgaltDate">15-Aug</div>
+          <div class="surgaltName">Refuge Chamber</div>
+          <div class="venue">Shaft 1 GCR Prestart meeting room</div>
+          <div class="hours">08:00-17:00</div>
+        </div> -->
+      </div>
+      <div id="nemeh" class="list">
+        <!-- <div class="list_view clearfix">
+          <div class="qualification">sdfdweag</div>
+          <div class="right clearfix">
+            <div class="expiry_date">2020</div>
+          </div>
+        </div>
+        <div class="list_view clearfix">
+          <div class="qualification">sdfdweag</div>
+          <div class="right clearfix">
+            <div class="expiry_date">2020</div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <table class="results__list">
+          <tr class="result__row">
+            <th class="trainingName">Сургалтын Нэр</th>
+            <th class="expire">Дуусах хугацаа</th>
+          </tr>
+           Сургалтын лист энд гарна
+          <tr class="result__row">
+            <th class="trainingList">OT induction</th>
+            <th class="dateExp">2/8/2020</th>
+          </tr>
+          <tr class="result__row">
+            <th class="trainingList">
+              Personal Lock Holder
+            </th>
+            <th class="dateExp">10/8/2020</th>
+          </tr>
+          <tr class="result__row">
+            <th class="trainingList">CRM for Team</th>
+            <th class="dateExp">2/28/2021</th>
+          </tr>
+        </table> -->
+        <div id="vocUstgah" class="vocHaruulah">
+          <!-- <div class="voc">
+            <div class="eqType">Telehandler</div>
+            <div class="eqbrand">Bobcat</div>
+            <div class="eqModel">TH5020</div>
+            <div class="expiryDate">4/4/2021</div>
+          </div> -->
+          <!-- <div class="voc">
+            <div class="surgaltDate">15-Aug</div>
+            <div class="surgaltName">Refuge Chamber</div>
+            <div class="venue">Shaft 1 GCR Prestart meeting room</div>
+            <div class="hours">08:00-17:00</div>
+          </div> -->
+        </div>
+        <div class="notif">
+          <div class="news">
+            Барилгын шат угсрах болон буулгахад дээрээс биет унах, өндрөөс унах эрсдлүүд байнга дагадаг ба дараах байдлаар хяналтын арга хэмжээг авч ажиллана.<br>
+          <img src="./Дээрээс биет унах.png" width="90px" height="75px"><br>
+          Дээрээс биет унах<br>
+          <ul>
+            <li>Хаалт хашилтаар тусгаарлах, ингэхдээ уналтын зайг тодорхойлох</li>
+            <li>Бараа материалыг гараас гарт дамжуулах</li>
+            <li>Багаж, материалын зориулалтын уут сав хэрэглэх</li>
+            <li>Өндөрт бараа материалыг олсоор татах тохиолдолд сургагдсан хүнээр оосорлогоог хийлгэх</li>
+            <li>Багажны татлага тогтмол хэрэглэх</li>
+            <li>Шаардлагатай гэж үзвэл ажлын талбайд хянагч томилох</li>
+            <li>Ажлын тавцанг бүрэн дүүргэж, хөвөө хаалтыг хийх</li>
+            <li>Сул бараа материалыг ажлын тавцан дээр байрлуулахгүй байх</li>
+            <li>Ролик болон олс, багаж хэрэгслийн уут савыг тогтмол шалгах</li>
+            <li>Хураасан материалын тогтвортой байдлыг хангаж зах ирмэг, хөвөө хаалтнаас өндөр хураахгүй байх</li>
+            <li>Харилцаа холбоо сайтай байх</li>
+          </ul>
+        <br>
+          <img src="./Өндрөөс унах.png" width="90px" height="75px"><br>
+          Өндрөөс унах <br>
+          <ul>
+            Зах ирмэгийн хаалттай суурин ажлын тавцан<br>
+            Барилгын шатыг угсрах болон буулгах явцад
+            <li>Өндрийн бүс тогтмол хэрэглэх</li>
+            <li>Бэхэлгээний цэгийг зөв сонгох</li>
+            <li>1 метрийн алгасалтай хөндлөн хатуу хаалт хийж ажиллах</li>
+            <li>Түр ажлын тавцанг дүүргэж ажиллах</li>
+            <li>SG-4 step ашиглахдаа дээрээс бэхэлгээний цэг авах, зөв суурилуулах</li>
+            <li>Шатаар өгсөхдөө 3-н цэгийн тулгуур ашиглах</li>
+            <li>Тавцангын тогтвортой байдлыг шалгах</li>
+            <li>Өндрийн хэрэгслийг тогтмол шалгах</li>
+            <li>Харилцаа холбоо сайтай байх</li>
+          </ul>
+        <br>
+          </div>  
+          <div class="covid">СОЁЛЫН ӨВИЙГ ДЭЭДЛЭГЧ ОЮУ ТОЛГОЙ.</div>
+        </div>
+        </div>
+        
+    
+    <div class="developed">
+      Developed by
+      <a href="https://www.instagram.com/b_altanshagai/" target="_blank">Altanshagai</a>
+    </div>
+    <script type="text/javascript" src="real.js"></script>
+  
+
+</body></html>
