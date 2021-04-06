@@ -33,8 +33,9 @@
     justify-content: center;
     width: 100%;
     margin: auto auto;
-  
+  align-items: center;
     border-radius: 6px;
+   
     /* 
     box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2); */
     position: absolute;

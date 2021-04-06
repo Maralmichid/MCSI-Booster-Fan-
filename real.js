@@ -235,7 +235,7 @@ var uiController = (function () {
         appId: "1:533847511325:web:e5d0d72bf912b3bd9691f4"
       };
       firebase.initializeApp(firebaseConfig);
-      var messagesRef = firebase.database().ref('EmployeeList');
+      var messagesRef = firebase.database().ref('Data');
       var result=[];
       var dataT
       messagesRef.once('value', function(snapshot){
